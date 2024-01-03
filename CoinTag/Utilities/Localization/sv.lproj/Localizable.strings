@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  CoinTag
+
+  Created by Emad Beyrami on 2023-12-28.
+  
+*/
+
+"COINS_TITLE" = "Coins";
+"SETTING_TITLE" = "Inställningar";
+"CRYPTOS_TITLE" = "Kryptovalutor";
+"CURRENT_TITLE" = "nuvarande";
+"RANK_TITLE" = "Rankning";
+"MARKETCAP_TITLE" = "Marknadsvärde";
+"CIRCULATINGSUPPLY_TITLE" = "Cirkulerande tillgång";
+"CHART_TITLE" = "Diagram";
+"TIME_TITLE" = "Tid";
+"PRICE_TITLE" = "Pris";
+"CURRENT_PRICE_VALUE_TITLE" = "nuvarande prisvärde";
+
+"SYSTEM_THEME_TITLE" = "System";
+"LIGHT_THEME_TITLE" = "Ljus";
+"DARK_THEME_TITLE" = "Mörk";
+
+"THEME_TITLE" = "Tema";
+
+"SELECT_CURRENCY" = "Välj valuta";
+"CURRENCY_TITLE" = "Valuta";
+
+"DONE_TITLE" = "Klar";
+"LANGUAGE_TITLE" = "Språk";
+"COIN_TITLE" = "Mynt";
+"SETTINGS_TITLE" = "Inställningar";
+
+"LINE_CHART_TITLE" = "Linjediagram";
+"AREA_CHART_TITLE" = "Områdesdiagram";
+"POINT_CHART_TITLE" = "Punktdiagram";
+"RECTANGLE_CHART_TITLE" = "Rektangeldiagram";
+"BAR_CHART_TITLE" = "Stapeldiagram";
+
+"LANGUAGE_CHANGE_TITLE" = "Språk";
+"LANGUAGE_CHANGE_MESSAGE" = "För att ändra appens språk måste du ändra det från inställningar";
+"CANCEL_TITLE" = "Avbryt";
+"OPEN_SETTING_TITLE" = "Öppna Inställningar";

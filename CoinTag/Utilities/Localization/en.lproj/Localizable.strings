@@ -1,0 +1,43 @@
+/*
+ Localizable.strings
+ CoinTag
+ 
+ Created by Emad Beyrami on 2023-12-28.
+ */
+
+"COINS_TITLE" = "Coins";
+"SETTING_TITLE" = "Settings";
+"CRYPTOS_TITLE" = "Cryptos";
+"CURRENT_TITLE" = "currrent";
+"RANK_TITLE" = "Rank";
+"MARKETCAP_TITLE" = "Market Cap";
+"CIRCULATINGSUPPLY_TITLE" = "Circulating Supply";
+"CHART_TITLE" = "Chart";
+"TIME_TITLE" = "Time";
+"PRICE_TITLE" = "Price";
+"CURRENT_PRICE_VALUE_TITLE" = "current price value";
+
+"SYSTEM_THEME_TITLE" = "System";
+"LIGHT_THEME_TITLE" = "Light";
+"DARK_THEME_TITLE" = "Dark";
+
+"THEME_TITLE" = "Theme";
+
+"SELECT_CURRENCY" = "Select Currency";
+"CURRENCY_TITLE" = "Currency";
+
+"DONE_TITLE" = "Done";
+"LANGUAGE_TITLE" = "Language";
+"COIN_TITLE" = "Coins";
+"SETTINGS_TITLE" = "Settings";
+
+"LINE_CHART_TITLE" = "Line Mark";
+"AREA_CHART_TITLE" = "Area Chart";
+"POINT_CHART_TITLE" = "Point Chart";
+"RECTANGLE_CHART_TITLE" = "Rectangle Chart";
+"BAR_CHART_TITLE" = "Bar Chart";
+
+"LANGUAGE_CHANGE_TITLE" = "Language";
+"LANGUAGE_CHANGE_MESSAGE" = "in order to change the app language you need to change it from settings";
+"CANCEL_TITLE" = "Cancel";
+"OPEN_SETTING_TITLE" = "Open Settings";

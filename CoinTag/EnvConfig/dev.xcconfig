@@ -1,0 +1,16 @@
+//
+//  dev.xcconfig
+//  CoinTag
+//
+//  Created by Emad Beyrami on 2023-12-28.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = CoinTag Dev
+BASE_BUNDLE_ID = dev.beyrami.cointag.dev
+APP_ICON = AppIcon-dev
+
+API_BASE_URL = https:\/\/sandbox-api.coinmarketcap.com
+API_KEY = b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c
