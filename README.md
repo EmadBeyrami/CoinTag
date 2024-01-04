@@ -26,9 +26,12 @@ A CryptoCurrency Price Tracker App, Written in SwiftUI
 * used the latest Swift features
 
 ## Upcoming:
+* implement widgets for the app
+* implement an App Watch
 * Ability to make a favourite list
 * test coverage for most parts including network
 * Have a better error handling
+* improve UI/UX
 
 ## How to compile:
 1. Clone the project.
