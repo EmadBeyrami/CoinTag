@@ -27,7 +27,7 @@ A CryptoCurrency Price Tracker App, Written in SwiftUI
 
 ## Upcoming:
 * implement widgets for the app
-* implement an App Watch
+* implement an Watch App
 * Ability to make a favourite list
 * test coverage for most parts including network
 * Have a better error handling
