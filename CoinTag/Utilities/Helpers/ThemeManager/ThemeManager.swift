@@ -10,7 +10,7 @@ import Observation
 
 // MARK: - Theme Manager
 /// This Class is responsible for storing and fetching  user preferred theme setting
-@MainActor
+@MainActor // because it works directly with UI
 @Observable
 class ThemeManager {
 	enum ThemeSetting: String {

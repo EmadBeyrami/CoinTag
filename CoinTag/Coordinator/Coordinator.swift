@@ -8,15 +8,17 @@
 import Foundation
 import SwiftUI
 
-@MainActor
+@MainActor // cause handles UI changes
 @Observable
 final class CryptoCoordinator: CoordinatorType {
 	
+	// MARK: - Properties
 	var themeManager = ThemeManager()
 	var path = NavigationPath()
 	var sheet: Sheet?
 	var fullScreenCover: FullScreenCover?
 	
+	// MARK: - Methods
 	@ViewBuilder
 	func build(page: Page) -> some View {
 		switch page {

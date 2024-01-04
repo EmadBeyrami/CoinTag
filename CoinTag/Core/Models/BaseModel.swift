@@ -19,7 +19,7 @@ struct BaseModel<M: Codable>: Codable {
 struct Status: Codable {
 	let errorCode: Int
 	let errorMessage: String?
-	let totalCount: Int
+	let totalCount: Int?
 	
 	enum CodingKeys: String, CodingKey {
 		case errorCode = "error_code"

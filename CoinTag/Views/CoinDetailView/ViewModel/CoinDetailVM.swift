@@ -7,13 +7,15 @@
 
 import Foundation
 
+// MARK: - CoinDetailVMType
+// to make it more generic
 protocol CoinDetailVMType: Hashable {
 	var coin: Coin { get set }
 	var chartType: ChartType { get set }
 	var chartTimeline: ChartSegment { get set }
 	var chartDataPoint: [ChartModel] { get set }
 }
-
+// to make it work with the Coordinator (NavigationStack) we need this to be hashable
 extension CoinDetailVMType {
 	static func == (lhs: Self, rhs: Self) -> Bool {
 		lhs.coin.id == rhs.coin.id &&
@@ -27,15 +29,11 @@ extension CoinDetailVMType {
 		hasher.combine(chartDataPoint.count)
 	}
 }
-
+// MARK: - CoinDetailVM
 final class CoinDetailVM: CoinDetailVMType, ObservableObject {
 	
+	// MARK: - Properties
 	var coin: Coin
-	init(coin: Coin) {
-		self.coin = coin
-		self.chartTimeline = .allTime
-	}
-	
 	@Published var chartDataPoint: [ChartModel] = []
 	@Published var chartType: ChartType = .lineMark
 	@Published var chartTimeline: ChartSegment = .allTime {
@@ -45,12 +43,20 @@ final class CoinDetailVM: CoinDetailVMType, ObservableObject {
 		}
 	}
 	
+	// MARK: - Initializer
+	init(coin: Coin) {
+		self.coin = coin
+		self.chartTimeline = .allTime
+	}
 }
 
+// MARK: - ChartableQouteType
 protocol ChartableQouteType {
 	var chartableQuote: Quote? { get }
 }
 
+// MARK: - Extension Coin
+// to return whatever view needs from coin
 extension Coin: ChartableQouteType {
 	var chartableQuote: Quote? {
 		if let coinRate = self.quote.first(where: {$0.key == currentCurrency.rawValue}) {

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CurrencyPicker: View {
 	
+	// MARK: - Properties
 	@EnvironmentObject private var coordinator: CryptoCoordinator
 	@Binding var selectedCurrency: ExchangeCurrencies
 	
+	// MARK: - View Body
 	var body: some View {
 		NavigationView {
 			VStack {

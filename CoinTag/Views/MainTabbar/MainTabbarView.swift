@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct MainTabbarView: View {
+	// MARK: - Properties
 	@EnvironmentObject private var coordinator: CryptoCoordinator
 	
+	// MARK: - View Body
 	var body: some View {
+		// MARK: TabView
 		TabView {
 			// First tab content
 			CoinListView()

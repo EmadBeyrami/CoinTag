@@ -9,12 +9,15 @@ import SwiftUI
 
 struct SettingView: View {
 	
+	// MARK: - Properties
 	@EnvironmentObject private var coordinator: CryptoCoordinator
 	@ObservedObject var vm: SettingViewModel = SettingViewModel()
 	@State private var showSettingAlert: Bool = false
 	
+	// MARK: - View Body
 	var body: some View {
 		NavigationView {
+			// List of Settings
 			List(SettingItems.allCases) { item in
 				switch item {
 				case .Currency:

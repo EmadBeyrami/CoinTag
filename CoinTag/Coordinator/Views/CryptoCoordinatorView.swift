@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 struct CryptoCoordinatorView: View {
+	// MARK: - Properties
 	@StateObject private var coordinator = CryptoCoordinator()
 	
+	// MARK: - View Body
 	var body: some View {
 		NavigationStack(path: $coordinator.path) {
 			coordinator.build(page: .home)

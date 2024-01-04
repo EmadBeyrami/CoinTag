@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 
+
+// MARK: - ChartViewType
+// to make it more generic
 protocol ChartViewType: Identifiable {
 	var id: UUID { get }
 	var title: String { get set }
@@ -19,13 +22,16 @@ extension ChartViewType {
 		return UUID()
 	}
 }
-
+// MARK: - ChartModel
+// To have a model from that type
 struct ChartModel: ChartViewType {
 	var title: String
 	var price: Double
 	var rulePoint: Double?
 }
 
+// MARK: - ChartType
+// enum representing types of different available charts
 enum ChartType: String, CaseIterable, Identifiable {
 	case lineMark
 	case areaMark

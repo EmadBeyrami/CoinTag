@@ -14,7 +14,7 @@ struct Coin: Codable, Identifiable {
 	let name, symbol, slug: String
 	let tags: [String]
 	let circulatingSupply, totalSupply: Double
-	let infiniteSupply: Bool
+	let infiniteSupply: Bool?
 	let platform: Platform?
 	let selfReportedCirculatingSupply, selfReportedMarketCap, tvlRatio: Double?
 	var quote: [String: Quote]
@@ -47,9 +47,18 @@ struct Platform: Codable {
 
 // MARK: - Quote
 struct Quote: Codable {
-	let price, volume24H, volumeChange24H, percentChange1H: Double
-	let percentChange24H, percentChange7D, percentChange30D, percentChange60D: Double
-	let percentChange90D, marketCap, marketCapDominance, fullyDilutedMarketCap: Double
+	let price: Double
+	let volume24H: Double?
+	let volumeChange24H: Double
+	let percentChange1H: Double
+	let percentChange24H: Double
+	let percentChange7D: Double
+	let percentChange30D: Double?
+	let percentChange60D: Double?
+	let percentChange90D: Double?
+	let marketCap: Double
+	let marketCapDominance: Double
+	let fullyDilutedMarketCap: Double
 	let tvl: Double?
 	
 	enum CodingKeys: String, CodingKey {
@@ -68,3 +77,5 @@ struct Quote: Codable {
 		case tvl
 	}
 }
+
+

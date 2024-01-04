@@ -10,6 +10,7 @@ import Observation
 
 final class CoinListViewModel: ObservableObject, Priceable {
 	
+	// MARK: - Properties
 	@Published private(set) var isLoading: Bool = false
 	@Published private var coins: [Coin] = []
 	private var service: HomeServiceDelegate = HomeService()
@@ -27,35 +28,34 @@ final class CoinListViewModel: ObservableObject, Priceable {
 		}
 	}
 	
+	// MARK: initializer
 	init(service: HomeServiceDelegate) {
 		self.service = service
 		self.token = Keychain.shared.load(withKey: Keys.accessToken)
 	}
 	
-	@MainActor
-	func getCoins() async {
+	// MARK: - Methods
+	@MainActor // because it updates UI
+	func getCoins() async throws {
 		guard let token = token else { return }
 		isLoading = true
 		do {
 			let result = try await service.getLatestCoins(token: token, currency: currentCurrency)
-			DispatchQueue.main.async { [weak self] in
-				guard let self = self else { return }
-				coins = result.data
-				isLoading = false
-			}
+			coins = result.data
+			isLoading = false
 		}
 		catch {
 #if DEBUG
 			print(error)
 #endif
-			DispatchQueue.main.async { [weak self] in
-				self?.isLoading = false
-			}
+			isLoading = false
+			throw error
 		}
 	}
 }
 
-
+// MARK: - Extensions
+/// Coin Extensions to conform to what the View needs
 extension Coin: CryptoItemViewType {
 	var title: String {
 		return self.name

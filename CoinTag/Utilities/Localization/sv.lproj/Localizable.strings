@@ -42,3 +42,4 @@
 "LANGUAGE_CHANGE_MESSAGE" = "För att ändra appens språk måste du ändra det från inställningar";
 "CANCEL_TITLE" = "Avbryt";
 "OPEN_SETTING_TITLE" = "Öppna Inställningar";
+"ERROR_TITLE" = "Fel";

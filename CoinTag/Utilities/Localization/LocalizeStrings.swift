@@ -44,6 +44,7 @@ enum LocalizeStrings: String {
 	case langChangeMessage 		  = "LANGUAGE_CHANGE_MESSAGE"
 	case cancelTitle 						= "CANCEL_TITLE"
 	case openSettingTitle			  = "OPEN_SETTING_TITLE"
+	case errorTitle 						= "ERROR_TITLE"
 	
 	/// - Returns: returns the key  as (`LocalizedStringKey`)
 	var localized: LocalizedStringKey {

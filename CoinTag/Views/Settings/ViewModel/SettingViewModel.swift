@@ -7,13 +7,17 @@
 
 import SwiftUI
 
+// MARK: - SettingItems
+// representing all the items in the setting list
 enum SettingItems: CaseIterable, Identifiable {
+	// setting Items
 	case Language
 	case Currency
 	case Theme
 	
 	var id: Self { self }
 	
+	// returns Human readable names of items
 	var displayName: LocalizedStringKey {
 		switch self {
 		case .Language: return LocalizeStrings.languageTitle.localized
@@ -23,11 +27,15 @@ enum SettingItems: CaseIterable, Identifiable {
 	}
 }
 
+// MARK: - SettingViewModel
 final class SettingViewModel: ObservableObject, Priceable {
 	
+	// MARK: - Properties
 	@Published var showingCurrencyPicker = false
 	@Published var current: ExchangeCurrencies = GlobalCurrency.shared.currency
 	
+	// MARK: - Methods
+	// opens the app setting in the phone
 	func openAppInSetting() {
 		UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
 	}

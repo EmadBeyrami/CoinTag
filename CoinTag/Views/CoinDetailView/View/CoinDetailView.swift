@@ -9,13 +9,16 @@ import SwiftUI
 
 struct CoinDetailView: View {
 	
+	// MARK: - Properties
 	@EnvironmentObject private var coordinator: CryptoCoordinator
 	@ObservedObject private var vm: CoinDetailVM
 	
+	// MARK: - Initializer
 	init(vm: CoinDetailVM) {
 		self.vm = vm
 	}
 	
+	// MARK: - view body
 	var body: some View {
 		VStack {
 			// MARK: Header
@@ -42,7 +45,7 @@ struct CoinDetailView: View {
 			
 			// MARK: List of aditional information
 			List {
-				createRow(title: LocalizeStrings.rankTitle.localized, 
+				createRow(title: LocalizeStrings.rankTitle.localized,
 									detail: "#\(vm.coin.rank)")
 				createRow(title: LocalizeStrings.marketCapTitle.localized,
 									detail: vm.coin.chartableQuote?.marketCap.toCurrencyString() ?? "")
@@ -59,8 +62,8 @@ struct CoinDetailView: View {
 						Text(item.displayName).tag(item)
 					}
 				}
-				.pickerStyle(SegmentedPickerStyle())
-				.padding()
+							 .pickerStyle(SegmentedPickerStyle())
+							 .padding()
 				
 				ChartView(dataPoint: vm.chartDataPoint, chartType: vm.chartType)
 					.frame(height: 240)
@@ -83,6 +86,8 @@ struct CoinDetailView: View {
 		)
 	}
 	
+	// MARK: - Methods
+	// MARK: Creates rows for the list above
 	func createRow(title: LocalizedStringKey, detail: String) -> some View {
 		HStack {
 			Text(title)

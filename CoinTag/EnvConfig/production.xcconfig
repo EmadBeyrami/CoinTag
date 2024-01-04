@@ -13,5 +13,5 @@ BASE_BUNDLE_ID = dev.beyrami.cointag
 APP_ICON = AppIcon
 
 API_BASE_URL = https:\/\/pro-api.coinmarketcap.com
-API_KEY = 2a851998-4e32-4831-8025-de369a045935
+API_KEY = YOUR_API_KEY_HERE
 
